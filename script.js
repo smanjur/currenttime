@@ -3,10 +3,17 @@ let hourEl = document.querySelector(".hour h3")
 let minuteEl = document.querySelector(".minute h3")
 let secondEl = document.querySelector(".second h3")
 
+let currentYear = document.querySelector(".year")
+let year= new Date().getFullYear();
+year+=1;
+currentYear.textContent = year;
+
+
+
 
 // console.log(dayEl,hourEl,minuteEl,secondEl)
-let newYearTime = new Date("jan 1 ,2026 00:00:00").getTime();
 
+let newYearTime = new Date(`jan 1 ,${year} 00:00:00`).getTime();
 
 
 updateCountdown();
